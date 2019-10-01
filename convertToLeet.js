@@ -34,7 +34,7 @@ function convertToLeet(sentence) {
     for (let i = 0; i < sentence.length; i++) {
         let character = sentence.charAt(i).normalize("NFD").replace(/[\u0300-\u036f]/g, "");
         
-        let leetChar = isLetter(character) ? leetDictionnary[character] : character;
+        let leetChar = isLetter(character) ? leetDictionnary[character.toLowerCase()] : character;
        
         leetSentence += leetChar;
     }
