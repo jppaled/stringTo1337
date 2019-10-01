@@ -4,7 +4,7 @@ function convertToLeet(sentence) {
         "b": "8",
         "c": "(",
         "d": "[)",
-        "e": '3',
+        "e": "3",
         "f": "|=",
         "g": "6",
         "h": "#",
