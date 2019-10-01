@@ -12,7 +12,7 @@ function convertToLeet(sentence) {
         "g": "6",
         "h": "#",
         "i": "I",
-        "J": "_|",
+        "j": "_|",
         "k": "|<",
         "l": "1",
         "m": "|v|",
