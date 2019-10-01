@@ -1,5 +1,7 @@
 # stringTo1337
 
+[Demo](https://jppaled.github.io/stringTo1337/)
+
 ```javascript
 function convertToLeet(sentence) {
     const leetDictionnary = {
