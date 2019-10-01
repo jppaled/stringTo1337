@@ -9,7 +9,7 @@ function convertToLeet(sentence) {
         "b": "8",
         "c": "(",
         "d": "[)",
-        "e": '3',
+        "e": "3",
         "f": "|=",
         "g": "6",
         "h": "#",
@@ -43,11 +43,19 @@ function convertToLeet(sentence) {
        
         leetSentence += leetChar;
     }
+    
+    let p = document.getElementById('leet');
 
-    return leetSentence;
+    p.innerHTML = leetSentence;
 }
 
 function isLetter(c) {
     return c.toLowerCase() != c.toUpperCase();
+}
+
+function main() {
+    var inputVal = document.getElementById("sentence").value;
+
+    convertToLeet(inputVal);
 }
 ```
