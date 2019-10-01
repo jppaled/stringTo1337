@@ -39,7 +39,7 @@ function convertToLeet(sentence) {
         leetSentence += leetChar;
     }
 
-    console.log(leetSentence);
+    return leetSentence;
 }
 
 function isLetter(c) {
