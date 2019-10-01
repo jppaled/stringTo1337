@@ -9,7 +9,7 @@ function convertToLeet(sentence) {
         "g": "6",
         "h": "#",
         "i": "I",
-        "J": "_|",
+        "j": "_|",
         "k": "|<",
         "l": "1",
         "m": "|v|",
@@ -38,10 +38,18 @@ function convertToLeet(sentence) {
        
         leetSentence += leetChar;
     }
+    
+    let p = document.getElementById('leet');
 
-    return leetSentence;
+    p.innerHTML = leetSentence;
 }
 
 function isLetter(c) {
     return c.toLowerCase() != c.toUpperCase();
+}
+
+function main() {
+    var inputVal = document.getElementById("sentence").value;
+
+    convertToLeet(inputVal);
 }
