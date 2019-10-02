@@ -3,7 +3,7 @@
 [Demo](https://jppaled.github.io/stringTo1337/)
 
 ```javascript
-ffunction convertToLeet() {
+function convertToLeet() {
     let sentence = document.getElementById("sentence").value;
     
     const leetDictionnary = {
