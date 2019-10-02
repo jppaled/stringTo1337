@@ -3,7 +3,9 @@
 [Demo](https://jppaled.github.io/stringTo1337/)
 
 ```javascript
-function convertToLeet(sentence) {
+ffunction convertToLeet() {
+    let sentence = document.getElementById("sentence").value;
+    
     const leetDictionnary = {
         "a": "4",
         "b": "8",
@@ -26,8 +28,8 @@ function convertToLeet(sentence) {
         "s": "5",
         "t": "7",
         "u": "|_|",
-        "v": "\/",
-        "w": "\/\/",
+        "v": "\\\/",
+        "w": "\\\/\\\/",
         "x": "><",
         "y": "`/",
         "z": "7_",
@@ -39,7 +41,7 @@ function convertToLeet(sentence) {
     for (let i = 0; i < sentence.length; i++) {
         let character = sentence.charAt(i).normalize("NFD").replace(/[\u0300-\u036f]/g, "");
         
-        let leetChar = isLetter(character) ? leetDictionnary[character] : character;
+        let leetChar = isLetter(character) ? leetDictionnary[character.toLowerCase()] : character;
        
         leetSentence += leetChar;
     }
@@ -51,11 +53,5 @@ function convertToLeet(sentence) {
 
 function isLetter(c) {
     return c.toLowerCase() != c.toUpperCase();
-}
-
-function main() {
-    var inputVal = document.getElementById("sentence").value;
-
-    convertToLeet(inputVal);
 }
 ```
