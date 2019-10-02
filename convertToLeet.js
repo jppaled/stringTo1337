@@ -1,4 +1,6 @@
-function convertToLeet(sentence) {
+function convertToLeet() {
+    let sentence = document.getElementById("sentence").value;
+    
     const leetDictionnary = {
         "a": "4",
         "b": "8",
@@ -21,8 +23,8 @@ function convertToLeet(sentence) {
         "s": "5",
         "t": "7",
         "u": "|_|",
-        "v": "\/",
-        "w": "\/\/",
+        "v": "\\\/",
+        "w": "\\\/\\\/",
         "x": "><",
         "y": "`/",
         "z": "7_",
@@ -46,10 +48,4 @@ function convertToLeet(sentence) {
 
 function isLetter(c) {
     return c.toLowerCase() != c.toUpperCase();
-}
-
-function main() {
-    var inputVal = document.getElementById("sentence").value;
-
-    convertToLeet(inputVal);
 }
