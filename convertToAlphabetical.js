@@ -1,4 +1,4 @@
-function covertToAlphabetical() {
+function covertToAlphabetical() {
     let sentence = document.getElementById("leetSentence").value;
     
     const alphabeticalDictionnary = {
@@ -40,67 +40,67 @@ function covertToAlphabetical() {
         let fourthCharacter = sentence.charAt(i + 3);
        
         if (character === '(' && nextCharacter === "_") {
-            alphabeticalSentence += alphabeticalDictionnary["(_,)"];
+            alphabeticalSentence += alphabeticalDictionnary["(_,)"];  // q
             
             i = i + 3;       
         } else if (character === "[") {
-            alphabeticalSentence += alphabeticalDictionnary["[)"];
+            alphabeticalSentence += alphabeticalDictionnary["[)"]; // d
             
             i++;
         } else if (character === "^") {
-            alphabeticalSentence += alphabeticalDictionnary["^/"];
+            alphabeticalSentence += alphabeticalDictionnary["^/"]; // n
 
             i++;
         } else if (character === "|") {
             if(nextCharacter === "=") {
-                alphabeticalSentence += alphabeticalDictionnary["|="];
+                alphabeticalSentence += alphabeticalDictionnary["|="]; // f
                 
                 i++;
             } else if (nextCharacter === "<") {
-                alphabeticalSentence += alphabeticalDictionnary["|<"];
+                alphabeticalSentence += alphabeticalDictionnary["|<"]; // k
                 
                 i++;
             } else if (nextCharacter === "v") {
-                alphabeticalSentence += alphabeticalDictionnary["|v|"];
+                alphabeticalSentence += alphabeticalDictionnary["|v|"]; // m
                 
                 i = i + 2
             } else if (nextCharacter === "*") {
-                alphabeticalSentence += alphabeticalDictionnary["|*"];
+                alphabeticalSentence += alphabeticalDictionnary["|*"]; // p
 
                 i++;
             } else if (nextCharacter === "_") {
-                alphabeticalSentence += alphabeticalDictionnary["|_|"];
+                alphabeticalSentence += alphabeticalDictionnary["|_|"]; // u
 
                 i = i + 2;
             }
         } else if (character === "_") {
-            alphabeticalSentence += alphabeticalDictionnary["_|"];
+            alphabeticalSentence += alphabeticalDictionnary["_|"]; // j
 
             i++;
         } else if (character === "7" && nextCharacter == "_") {
-            alphabeticalSentence += alphabeticalDictionnary["7_"];
+            alphabeticalSentence += alphabeticalDictionnary["7_"]; // z
             
             i++;
         } else if (character + nextCharacter === "\\\/") {
             if(thirdCharacter + fourthCharacter === "\\\/") {
-                alphabeticalSentence += alphabeticalDictionnary["\\\/\\\/"];
+                alphabeticalSentence += alphabeticalDictionnary["\\\/\\\/"]; // w
                 
                 i = i + 3;
             } else {
-                alphabeticalSentence += alphabeticalDictionnary["\\\/"];
+                alphabeticalSentence += alphabeticalDictionnary["\\\/"]; // v
                 
                 i++;
             }
         } else if (character === ">") {
-            alphabeticalSentence += alphabeticalDictionnary["><"];
+            alphabeticalSentence += alphabeticalDictionnary["><"]; // x
 
             i++;
         } else if (character === "`") {
-            alphabeticalSentence += alphabeticalDictionnary["`/"];
+            alphabeticalSentence += alphabeticalDictionnary["`/"]; // y
 
             i++;
         } else if (alphabeticalDictionnary[character]) {
-            alphabeticalSentence += alphabeticalDictionnary[character];
+            alphabeticalSentence += alphabeticalDictionnary[character]; // all other character
         } else {
             alphabeticalSentence += character;
         }
